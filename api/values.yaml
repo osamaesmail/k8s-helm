@@ -45,10 +45,14 @@ ingress:
   enabled: true
   className: ""
   annotations:
-     kubernetes.io/ingress.class: nginx
+      kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: api.k8s.dev
+    - host: noga.one
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+    - host: api-k8s.noga.one
       paths:
         - path: /
           pathType: ImplementationSpecific
