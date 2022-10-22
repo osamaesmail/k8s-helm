@@ -5,7 +5,7 @@ help: ## Show Help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 deploy-api:
-	helm upgrade --install api api
+	helm upgrade --install api-k8s api-k8s
 
 deploy-ingress: ## Deploy ingress
 	helm upgrade --install ingress-nginx ingress-nginx \
