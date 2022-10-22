@@ -8,7 +8,7 @@ image:
   repository: osamaesmail/k8s-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 7c271a63a04f9a95664149d06f4981f01f39f549
+  tag: 95f55b8c2b45efc51f4f57f2e15ff5108a359728
 
 imagePullSecrets: []
 nameOverride: ""
