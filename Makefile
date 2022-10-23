@@ -11,6 +11,10 @@ deploy-ingress: ## Deploy ingress
 	helm upgrade --install ingress-nginx ingress-nginx \
  	--namespace ingress-nginx --create-namespace --values ingress-nginx-values.yaml
 
+deploy-argo: ## Deploy argo
+	helm upgrade --install argocd argo-cd \
+ 	--namespace argo-cd --create-namespace --values argo-cd-values.yaml
+
 deploy-monitoring: ## Deploy ingress
 	helm upgrade --install kube-prometheus-stack kube-prometheus-stack \
  	--namespace kube-prometheus-stack --create-namespace --values kube-prometheus-stack-values.yaml

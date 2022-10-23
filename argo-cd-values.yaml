@@ -1,0 +1,10 @@
+server:
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    hosts:
+      - argo.noga.one
+     paths:
+       - path: /
+         pathType: ImplementationSpecific
