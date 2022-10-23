@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: api-k8s
+  namespace: argo-cd
+spec:
+  destination:
+    namespace: default
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: api
+    repoURL: "https://github.com/osamaesmail/k8s-helm.git"
+    targetRevision: master
+    helm:
+      valueFiles:
+        - values.yaml
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
