@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: k8s
+  namespace: argo-cd
+spec:
+  description: k8s test
+  sourceRepos:
+    - '*'
+
+  destinations:
+    - namespace: '*'
+      server: '*'
+
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
