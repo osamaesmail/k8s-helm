@@ -13,6 +13,8 @@ Helm charts example for micro services
 * [ ] Vault
 * [ ] AWS KMS
 * [ ] Terraform
+* [ ] Alert for service deploy status
+* [ ] VPN
 * [ ] Auto setup script
 
 ## How CD works
